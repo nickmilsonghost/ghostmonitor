@@ -26,7 +26,7 @@ def run_monitor():
             # TODO: Add Discord/email alert here if product_count > 0
         except Exception as e:
             print(f"Error: {e}")
-        time.sleep(300)  # check every 5 minutes
+        time.sleep(300)  # check every 1 minutes
 
 if __name__ == "__main__":
     import threading
