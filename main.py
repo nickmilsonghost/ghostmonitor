@@ -18,6 +18,12 @@ def home():
 # --- Discord webhook (replace with your URL) ---
 DISCORD_WEBHOOK_URL = "https://discord.com/api/webhooks/1422567143756660889/SLjdoBkIG-Si0NTy69VNl0EgULOYZbNlhBJxIHfs6QZl4zesa3HSm-tSOodae2H_KI_h"
 
+# --- Test Discord Alert ---
+if __name__ == "__main__":
+    test_message = "✅ Ghost Monitor test: Discord webhook is working!"
+    webhook = DiscordWebhook(url=DISCORD_WEBHOOK_URL, content=test_message)
+    webhook.execute()
+
 # --- Pages to monitor ---
 URLS = [
     "https://www.yorkghostmerchants.com/apparition",
