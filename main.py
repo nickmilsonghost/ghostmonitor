@@ -19,7 +19,7 @@ DISCORD_WEBHOOK_URL = "https://discord.com/api/webhooks/1422518082878046291/GyWR
 
 # --- Site check function ---
 def check_site():
-    url = "https://www.yorkghostmerchants.com/apparition"
+    url = "https://www.yorkghostmerchants.com/apparition", "www.yorkghostmerchants.com/shop"
     response = requests.get(url)
     soup = BeautifulSoup(response.text, "html.parser")
     products = soup.find_all("div", class_="product-grid-item")
