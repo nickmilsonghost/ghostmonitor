@@ -29,6 +29,6 @@ def run_monitor():
         time.sleep(300)  # check every 1 minutes
 
 if __name__ == "__main__":
-    import threading
-    threading.Thread(target=run_monitor).start()
+    import os
+    port = int(os.environ.get("PORT", 8080)) 
     app.run(host='0.0.0.0', port=8080)
